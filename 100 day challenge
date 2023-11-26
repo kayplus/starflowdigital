@@ -1,0 +1,53 @@
+class HabitTracker():
+    def __init__(self):
+        self.habit = {}
+        
+    def add_habit(self, habit):
+        if habit not in self.habit:
+            self.habit[habit] = False
+            print(f"{habit} has been added successfully")
+            
+    def mark_completed(self, habit):
+        if habit in self.habit:
+            self.habit[habit] = True
+            print(f"{habit} has successfully been completed")
+            
+        else:
+            print(f"{habit} does not exist yet")
+            
+    def display_habit(self):
+       print("Habit tracker: ")
+       for habit, status in self.habit.items():
+            if habit:
+                if status == True:
+                    status = "Completed"
+                else : 
+                    status == False
+                    status = "Not Complete"
+                
+                    
+            else:
+                pass
+                
+            
+            print(f"{habit} is {status}")
+            
+            
+def main():
+    habittracker = HabitTracker()
+    
+    
+    habittracker.add_habit("sleep")
+    habittracker.add_habit("work")
+    habittracker.mark_completed("do home work")
+    habittracker.mark_completed("sleep")
+    habittracker.display_habit()
+    
+if __name__ == "__main__" :
+    main()
+
+            
+
+            
+        
+        
